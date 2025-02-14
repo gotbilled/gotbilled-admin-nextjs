@@ -1,0 +1,52 @@
+.ck
+
+  p
+    font-size: getRem(14)
+    line-height: getRem(24)
+
+  h2
+    font-size: getRem(20)
+    line-height: getRem(28)
+
+  h3
+    font-size: getRem(18)
+    line-height: getRem(26)
+
+  h4
+    font-size: getRem(16)
+    line-height: getRem(24)
+
+  strong, b
+    font-weight: bold
+
+  i
+    font-style: italic
+
+  ul, ol
+    padding-left: getRem(16)
+    li
+      font-size: getRem(14)
+      line-height: getRem(24)
+
+  ul
+    li
+      list-style-type: disc
+
+      ul
+        li
+          list-style-type: circle
+
+          ul
+            li
+              list-style-type: square
+
+  ol
+    li
+      list-style-type: decimal
+
+  .ck-content
+    resize: vertical
+
+
+.ck-editor__editable:not(.ck-editor__nested-editable)
+  min-height: 400px

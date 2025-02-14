@@ -1,0 +1,27 @@
+{
+  "path": "/currencies",
+  "entry": [
+    {
+      "name": "Key",
+      "key": "key",
+      "type": "string"
+    },
+    {
+      "name": "Name",
+      "key": "name",
+      "type": "string"
+    },
+    {
+      "name": "Updated At",
+      "key": "updatedAt",
+      "type": "datetime",
+      "sortable": true
+    },
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": true
+    }
+  ]
+}

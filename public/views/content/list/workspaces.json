@@ -1,0 +1,97 @@
+{
+  "path": "/workspaces",
+  "entry": [
+    {
+      "name": "Name",
+      "key": "name",
+      "type": "string"
+    },
+    {
+      "name": "Currency",
+      "key": "currency.name",
+      "populate": "currency",
+      "type": "string"
+    },
+    {
+      "name": "Invoicing Limit",
+      "key": "invoicing.limit",
+      "type": "number"
+    },
+    {
+      "name": "Type",
+      "key": "type",
+      "type": "select",
+      "options": [
+        {
+          "name": "Personal",
+          "key": "personal"
+        },
+        {
+          "name": "Business",
+          "key": "business"
+        }
+      ]
+    },
+    {
+      "name": "Plan",
+      "key": "plan",
+      "type": "select",
+      "options": [
+        {
+          "name": "Free",
+          "key": "free",
+          "color": "neutral"
+        },
+        {
+          "name": "Standard",
+          "key": "standard",
+          "color": "primary"
+        },
+        {
+          "name": "Premium",
+          "key": "premium",
+          "color": "secondary"
+        },
+        {
+          "name": "Enterprise",
+          "key": "enterprise",
+          "color": "alternative"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "key": "status",
+      "type": "select",
+      "options": [
+        {
+          "name": "Open",
+          "key": "open",
+          "color": "primary"
+        },
+        {
+          "name": "Active",
+          "key": "active",
+          "color": "success"
+        },
+        {
+          "name": "Disabled",
+          "key": "disabled",
+          "color": "neutral"
+        },
+        {
+          "name": "Blocked",
+          "key": "blocked",
+          "color": "neutral"
+        }
+      ]
+    },
+
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": true
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "path": "/logs",
+  "entry": [
+    [
+      {
+        "name": "Type",
+        "key": "type",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "name": "Error",
+            "key": "error"
+          },
+          {
+            "name": "Info",
+            "key": "info"
+          }
+        ]
+      },
+      {
+        "name": "Resolved",
+        "key": "resolved",
+        "type": "boolean"
+      }
+    ],
+    [
+      {
+        "name": "Project",
+        "key": "project",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Version",
+        "key": "version",
+        "type": "string",
+        "required": true
+      }
+    ],
+    [
+      {
+        "name": "Details",
+        "key": "details",
+        "type": "json",
+        "required": true
+      }
+    ]
+  ]
+}

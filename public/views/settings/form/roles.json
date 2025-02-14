@@ -1,0 +1,46 @@
+{
+  "path": "/roles",
+  "entry": [
+    [
+      {
+        "name": "Name",
+        "key": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Description",
+        "key": "description",
+        "type": "string"
+      }
+    ],
+    [
+      {
+        "name": "Access",
+        "key": "access",
+        "type": "component",
+        "primary": "path",
+        "relation": "multi",
+        "entry": [
+          [
+            {
+              "name": "Path",
+              "key": "path",
+              "type": "select",
+              "required": true,
+              "options": "/list-paths"
+            },
+            {
+              "name": "Methods",
+              "key": "methods",
+              "type": "multiselect",
+              "required": true,
+              "reference": "path",
+              "options": "/list-methods?path={path}"
+            }
+          ]
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "path": "/service-categories",
+  "populate": ["group", "services"],
+  "entry": [
+    [
+      {
+        "name": "Name",
+        "key": "name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  ],
+  "relations": [
+    {
+      "name": "Group",
+      "key": "group",
+      "path": "/service-category-groups",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "content/service-category-groups"
+      },
+      "relation": "single",
+      "required": true
+    },
+    {
+      "name": "Services",
+      "key": "services",
+      "path": "/services",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "content/services"
+      },
+      "relation": "multi",
+      "required": false,
+      "disabled": true
+    }
+  ]
+}

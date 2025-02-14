@@ -1,0 +1,16 @@
+{
+  "path": "/service-categories",
+  "entry": [
+    {
+      "name": "Name",
+      "key": "name",
+      "type": "string"
+    },
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": true
+    }
+  ]
+}

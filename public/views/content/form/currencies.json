@@ -1,0 +1,61 @@
+{
+  "path": "/currencies",
+  "entry": [
+    [
+      {
+        "name": "Key",
+        "key": "key",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Featured",
+        "key": "featured",
+        "type": "boolean",
+        "required": true
+      }
+    ],
+    [
+      {
+        "name": "Name",
+        "key": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Name Plural",
+        "key": "namePlural",
+        "type": "string",
+        "required": true
+      }
+    ],
+    [
+      {
+        "name": "Symbol",
+        "key": "symbol",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Native Symbol",
+        "key": "nativeSymbol",
+        "type": "string",
+        "required": true
+      }
+    ],
+    [
+      {
+        "name": "Decimal Digits",
+        "key": "decimalDigits",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "USD Rate",
+        "key": "usdRate",
+        "type": "number",
+        "required": true
+      }
+    ]
+  ]
+}

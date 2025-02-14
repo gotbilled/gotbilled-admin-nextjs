@@ -1,0 +1,43 @@
+{
+  "path": "/logs",
+  "entry": [
+    {
+      "name": "Type",
+      "key": "type",
+      "type": "select",
+      "options": [
+        {
+          "name": "Info",
+          "key": "info",
+          "color": "neutral"
+        },
+        {
+          "name": "Error",
+          "key": "error",
+          "color": "danger"
+        }
+      ]
+    },
+    {
+      "name": "Project",
+      "key": "project",
+      "type": "string"
+    },
+    {
+      "name": "Version",
+      "key": "version",
+      "type": "string"
+    },
+    {
+      "name": "Resolved",
+      "key": "resolved",
+      "type": "boolean"
+    },
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": true
+    }
+  ]
+}

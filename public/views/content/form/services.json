@@ -1,0 +1,84 @@
+{
+  "path": "/services",
+  "populate": ["icon", "iconPNG", "categories"],
+  "entry": [
+    [
+      {
+        "name": "Name",
+        "key": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Featured",
+        "key": "featured",
+        "type": "boolean",
+        "required": true
+      }
+    ],
+    [
+      {
+        "name": "Icon",
+        "key": "icon",
+        "type": "asset",
+        "relation": "single",
+        "mimetype": "image",
+        "required": true
+      },
+      {
+        "name": "Icon PNG",
+        "key": "iconPNG",
+        "type": "asset",
+        "relation": "single",
+        "mimetype": "image",
+        "required": false
+      }
+    ],
+    [
+      {
+        "name": "Link",
+        "key": "link",
+        "type": "component",
+        "relation": "single",
+        "entry": [
+          [
+            {
+              "name": "Homepage",
+              "key": "homepage",
+              "type": "link",
+              "required": false
+            },
+            {
+              "name": "Billing",
+              "key": "billing",
+              "type": "link",
+              "required": false
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Popularity",
+        "key": "popularity",
+        "type": "number",
+        "required": true
+      }
+    ]
+  ],
+  "relations": [
+    {
+      "name": "Categories",
+      "key": "categories",
+      "path": "/service-categories",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "content/service-categories"
+      },
+      "relation": "multi",
+      "required": true
+    }
+  ]
+}

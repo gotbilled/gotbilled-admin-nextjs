@@ -1,0 +1,22 @@
+{
+  "path": "/services",
+  "entry": [
+    {
+      "name": "Name",
+      "key": "name",
+      "type": "string"
+    },
+    {
+      "name": "Icon",
+      "key": "icon",
+      "type": "asset",
+      "populate": "icon"
+    },
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": true
+    }
+  ]
+}

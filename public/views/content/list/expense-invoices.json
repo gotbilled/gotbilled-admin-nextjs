@@ -1,0 +1,44 @@
+{
+  "path": "/expense-invoices",
+  "entry": [
+    {
+      "name": "Invoice Number",
+      "key": "invoiceNumber",
+      "type": "string"
+    },
+    {
+      "name": "Expense Name",
+      "key": "expense.name",
+      "type": "string",
+      "populate": "expense"
+    },
+    {
+      "name": "Status",
+      "key": "status",
+      "type": "select",
+      "options": [
+        {
+          "name": "Draft",
+          "key": "draft",
+          "color": "neutral"
+        },
+        {
+          "name": "Open",
+          "key": "open",
+          "color": "primary"
+        },
+        {
+          "name": "Fulfilled",
+          "key": "fulfilled",
+          "color": "success"
+        }
+      ]
+    },
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "path": "/contacts",
+  "entry": [
+    {
+      "name": "Email",
+      "key": "email",
+      "type": "string",
+      "sortable": true
+    },
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": true
+    }
+  ]
+}

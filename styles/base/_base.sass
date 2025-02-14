@@ -1,0 +1,47 @@
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  outline: none
+  -webkit-tap-highlight-color: transparent
+
+body
+  overflow: hidden
+
+button
+  a
+    color: inherit
+
+a
+  text-decoration: none
+
+.layout
+  @include flexbox()
+
+  &--settings
+    main
+      @include flexbox
+      & > div
+        &:last-child
+          flex-grow: 2
+
+  main
+    flex-grow: 2
+    background-color: $lightGrey
+    overflow-y: scroll
+    height: 100vh
+
+[role=button]
+  cursor: pointer
+
+.scrollable
+  max-height: getRem(160)
+  overflow-x: hidden
+  overflow-y: auto
+
+.empty-component
+  button
+    border-radius: 50%
+
+.display-inline
+  display: inline-block !important

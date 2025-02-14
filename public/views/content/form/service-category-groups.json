@@ -1,0 +1,29 @@
+{
+  "path": "/service-category-groups",
+  "populate": ["categories"],
+  "entry": [
+    [
+      {
+        "name": "Name",
+        "key": "name",
+        "type": "string",
+        "required": true
+      }
+    ]
+  ],
+  "relations": [
+    {
+      "name": "Categories",
+      "key": "categories",
+      "path": "/service-categories",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "content/service-categories"
+      },
+      "relation": "multi",
+      "required": false,
+      "disabled": true
+    }
+  ]
+}

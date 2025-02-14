@@ -1,0 +1,9 @@
+.content-row
+  @include flexbox($align: stretch, $justify: space-between)
+  @include flexSpacing($colGap: 32)
+
+  & > div
+    width: 100%
+
+.content-column
+  @include flexbox($dir: column)

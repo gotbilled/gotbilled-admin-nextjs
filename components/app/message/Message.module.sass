@@ -1,0 +1,13 @@
+@import ~styles/base/mixins
+  
+.message
+  max-width: getRem(768)
+  @include positionCenterX($position: fixed, $top: getRem(16))
+  transform: translate(-50%, -100%)
+  @include transition((transform, opacity))
+  opacity: 0
+  z-index: 2
+
+  &.show
+    transform: translate(-50%, 0)
+    opacity: 1

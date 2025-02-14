@@ -1,0 +1,31 @@
+{
+  "path": "/assets",
+  "entry": [
+    {
+      "name": "Name",
+      "key": "name",
+      "type": "string"
+    },
+    {
+      "name": "Extension",
+      "key": "ext",
+      "type": "string"
+    },
+    {
+      "name": "Tags",
+      "key": "tags",
+      "type": "string"
+    },
+    {
+      "name": "Alt",
+      "key": "alt",
+      "type": "string"
+    },
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": false
+    }
+  ]
+}

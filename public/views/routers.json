@@ -1,0 +1,85 @@
+{
+  "content": [
+    {
+      "title": "Workspaces",
+      "titleSingular": "Workspace",
+      "path": "workspaces",
+      "icon": "Briefcase"
+    },
+    {
+      "title": "Expenses",
+      "titleSingular": "Expense",
+      "path": "expenses",
+      "icon": "PriceTag"
+    },
+    {
+      "title": "Expense Invoices",
+      "titleSingular": "Expense Invoice",
+      "path": "expense-invoices",
+      "icon": "Book"
+    },
+    {
+      "title": "Services",
+      "titleSingular": "Service",
+      "path": "services",
+      "icon": "Store"
+    },
+    {
+      "title": "Categories",
+      "titleSingular": "Category",
+      "path": "service-categories",
+      "icon": "Database"
+    },
+    {
+      "title": "Category Groups",
+      "titleSingular": "Category Group",
+      "path": "service-category-groups",
+      "icon": "Stack"
+    },
+    {
+      "title": "Currencies",
+      "titleSingular": "Currency",
+      "path": "currencies",
+      "icon": "Seed"
+    },
+    {
+      "title": "Members",
+      "titleSingular": "Member",
+      "path": "members",
+      "icon": "User"
+    },
+    {
+      "title": "Contacts",
+      "titleSingular": "Contact",
+      "path": "contacts",
+      "icon": "Discuss"
+    }
+  ],
+  "settings": [
+    {
+      "title": "Users",
+      "titleSingular": "User",
+      "path": "users",
+      "icon": "User"
+    },
+    {
+      "title": "Roles",
+      "titleSingular": "Role",
+      "path": "roles",
+      "icon": "Shield"
+    },
+    {
+      "title": "Manual Authentication",
+      "titleSingular": "Manual Authentication",
+      "path": "manual-authentication",
+      "icon": "Lock",
+      "customPage": true
+    },
+    {
+      "title": "Logs",
+      "titleSingular": "Log",
+      "path": "logs",
+      "icon": "Book"
+    }
+  ]
+}

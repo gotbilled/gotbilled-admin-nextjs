@@ -1,0 +1,110 @@
+{
+  "path": "/expense-invoices",
+  "populate": ["expense", "document", "payment.currency"],
+  "entry": [
+    [
+      {
+        "name": "Invoice Number",
+        "key": "invoiceNumber",
+        "type": "string",
+        "required": false
+      }
+    ],
+    [
+      {
+        "name": "Document",
+        "key": "document",
+        "type": "asset",
+        "relation": "single",
+        "mimetype": "application/pdf",
+        "required": false
+      },
+      {
+        "name": "Issue Date",
+        "key": "issueDate",
+        "type": "datetime",
+        "required": true
+      }
+    ],
+    [
+      {
+        "name": "Description",
+        "key": "description",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "Status",
+        "key": "status",
+        "type": "select",
+        "options": [
+          {
+            "name": "Draft",
+            "key": "draft"
+          },
+          {
+            "name": "Open",
+            "key": "open"
+          },
+          {
+            "name": "Fulfilled",
+            "key": "fulfilled"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Payment",
+        "key": "payment",
+        "type": "component",
+        "relation": "single",
+        "required": true,
+        "entry": [
+          [
+            {
+              "name": "Currency",
+              "key": "currency",
+              "path": "/currencies/list/all",
+              "type": "relation",
+              "content": {
+                "name": "name",
+                "key": "_id",
+                "path": "content/currencies"
+              },
+              "relation": "single",
+              "required": true
+            },
+            {
+              "name": "Raw Amount",
+              "key": "rawAmount",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "Amount",
+              "key": "amount",
+              "type": "number",
+              "required": true
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "relations": [
+    {
+      "name": "Expense",
+      "key": "expense",
+      "path": "/expenses",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "content/expenses"
+      },
+      "relation": "single",
+      "required": true,
+      "disabled": false
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "path": "/expenses",
+  "entry": [
+    {
+      "name": "Name",
+      "key": "name",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "key": "status",
+      "type": "select",
+      "options": [
+        {
+          "name": "Draft",
+          "key": "draft",
+          "color": "neutral"
+        },
+        {
+          "name": "Scheduled",
+          "key": "scheduled",
+          "color": "primary"
+        },
+        {
+          "name": "Trial",
+          "key": "trial",
+          "color": "primary"
+        },
+        {
+          "name": "Paid",
+          "key": "paid",
+          "color": "success"
+        },
+        {
+          "name": "Active",
+          "key": "active",
+          "color": "success"
+        },
+        {
+          "name": "Ended",
+          "key": "ended",
+          "color": "neutral"
+        },
+        {
+          "name": "Canceled",
+          "key": "canceled",
+          "color": "neutral"
+        }
+      ]
+    },
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": true
+    }
+  ]
+}

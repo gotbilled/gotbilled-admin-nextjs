@@ -1,0 +1,73 @@
+// Function to get rem values
+@function getRem($value)
+  @return calc($value / 16) + rem
+
+// Function for skipping argument
+@function getValue($default, $value)
+  @if $value == "_"
+    @return $default
+  @else 
+    @return $value
+
+// Transition
+@mixin transition($prop: all, $duration: .25s, $timing: ease-in-out, $delay: 0s)
+  transition-property: $prop
+  transition-duration: $duration
+  transition-timing-function: $timing 
+  transition-delay: $delay
+  @if $prop != all
+    will-change: $prop
+  
+// Flexbox
+@mixin flexbox($dir: row, $align: normal, $justify: normal, $wrap: nowrap)
+  display: flex
+  flex-direction: getValue(row, $dir)
+  align-items: getValue(normal, $align)
+  justify-content: getValue(normal, $justify)
+  flex-wrap: getValue(nowrap, $wrap)
+
+@mixin flexSpacing($rowGap: 0, $colGap: 0)
+  row-gap: calc(getValue(0, $rowGap) / 10) + rem
+  column-gap: calc(getValue(0, $colGap) / 10) + rem
+
+@mixin flex($grow: 0, $basis: auto, $shrink: 1)
+  flex: $grow $shrink $basis
+
+@mixin flexCenter($display: flex)
+  display: flex
+  align-content: center
+  justify-content: center
+  align-items: center
+
+@mixin flexCenterX($display: flex)
+  display: flex
+  align-items: center
+
+@mixin flexCenterY($display: flex)
+  display: flex
+  justify-content: center
+
+@mixin flexSpace($display: flex)
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+// Offset positioning
+@mixin position($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto)
+  position: $position
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+@mixin positionCenter($position: absolute)
+  @include position($position, 50%, auto, auto, 50%)
+  transform: translate(-50%, -50%)
+
+@mixin positionCenterX($position: absolute, $top: auto, $bottom: auto)
+  @include position($position, $top, auto, $bottom, 50%)
+  transform: translateX(-50%)
+
+@mixin positionCenterY($position: absolute, $left: auto, $right: auto)
+  @include position($position, 50%, $right, auto, $left)
+  transform: translateY(-50%)

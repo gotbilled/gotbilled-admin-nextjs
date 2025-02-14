@@ -1,0 +1,48 @@
+{
+  "path": "/users",
+  "entry": [
+    {
+      "name": "Email",
+      "key": "email",
+      "type": "string"
+    },
+    {
+      "name": "First Name",
+      "key": "details.firstName",
+      "type": "string"
+    },
+    {
+      "name": "Last Name",
+      "key": "details.lastName",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "key": "status",
+      "type": "select",
+      "options": [
+        {
+          "name": "Active",
+          "key": "active",
+          "color": "success"
+        },
+        {
+          "name": "Disabled",
+          "key": "disabled",
+          "color": "neutral"
+        },
+        {
+          "name": "Blocked",
+          "key": "blocked",
+          "color": "danger"
+        }
+      ]
+    },
+    {
+      "name": "Created At",
+      "key": "createdAt",
+      "type": "datetime",
+      "sortable": true
+    }
+  ]
+}

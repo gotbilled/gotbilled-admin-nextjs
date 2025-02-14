@@ -1,0 +1,292 @@
+{
+  "string": [
+    {
+      "key": "equals",
+      "name": "Equals",
+      "symbol": "",
+      "input": "string"
+    },
+    {
+      "key": "not-equals",
+      "name": "Not Equals",
+      "symbol": "!",
+      "input": "string"
+    },
+    {
+      "key": "contains",
+      "name": "Contains",
+      "symbol": "~",
+      "input": "string"
+    },
+    {
+      "key": "exists",
+      "name": "Exists",
+      "symbol": ""
+    },
+    {
+      "key": "not-exists",
+      "name": "Not Exists",
+      "symbol": "!"
+    }
+  ],
+  "number": [
+    {
+      "key": "equals",
+      "name": "Equals",
+      "symbol": "",
+      "input": "number"
+    },
+    {
+      "key": "not-equals",
+      "name": "Not Equals",
+      "symbol": "!",
+      "input": "number"
+    },
+    {
+      "key": "contains",
+      "name": "Contains",
+      "symbol": "~",
+      "input": "number"
+    },
+    {
+      "key": "exists",
+      "name": "Exists",
+      "symbol": ""
+    },
+    {
+      "key": "not-exists",
+      "name": "Not Exists",
+      "symbol": "!"
+    },
+    {
+      "key": "greater",
+      "name": "Greater Than",
+      "symbol": ">",
+      "input": "number"
+    },
+    {
+      "key": "less",
+      "name": "Less Than",
+      "symbol": "<",
+      "input": "number"
+    },
+    {
+      "key": "greater-equal",
+      "name": "Greater Than or Equal To",
+      "symbol": ">=",
+      "input": "number"
+    },
+    {
+      "key": "less-equal",
+      "name": "Less Than or Equal To",
+      "symbol": "<=",
+      "input": "number"
+    }
+  ],
+  "boolean": [
+    {
+      "key": "state",
+      "name": "Is",
+      "symbol": "",
+      "input": "boolean"
+    }
+  ],
+  "select": [
+    {
+      "key": "equals",
+      "name": "Equals",
+      "symbol": "",
+      "input": "select"
+    },
+    {
+      "key": "not-equals",
+      "name": "Not Equals",
+      "symbol": "!",
+      "input": "select"
+    },
+    {
+      "key": "exists",
+      "name": "Exists",
+      "symbol": ""
+    },
+    {
+      "key": "not-exists",
+      "name": "Not Exists",
+      "symbol": "!"
+    }
+  ],
+  "asset": [
+    {
+      "key": "exists",
+      "name": "Exists",
+      "symbol": ""
+    },
+    {
+      "key": "not-exists",
+      "name": "Not Exists",
+      "symbol": "!"
+    }
+  ],
+  "date": [
+    {
+      "key": "equals",
+      "name": "Equals",
+      "symbol": "",
+      "input": "date"
+    },
+    {
+      "key": "not-equals",
+      "name": "Not Equals",
+      "symbol": "!",
+      "input": "date"
+    },
+    {
+      "key": "exists",
+      "name": "Exists",
+      "symbol": ""
+    },
+    {
+      "key": "not-exists",
+      "name": "Not Exists",
+      "symbol": "!"
+    },
+    {
+      "key": "greater",
+      "name": "Greater Than",
+      "symbol": ">",
+      "input": "date"
+    },
+    {
+      "key": "less",
+      "name": "Less Than",
+      "symbol": "<",
+      "input": "date"
+    },
+    {
+      "key": "greater-equal",
+      "name": "Greater Than or Equal To",
+      "symbol": ">=",
+      "input": "date"
+    },
+    {
+      "key": "less-equal",
+      "name": "Less Than or Equal To",
+      "symbol": "<=",
+      "input": "date"
+    }
+  ],
+  "datetime": [
+    {
+      "key": "equals",
+      "name": "Equals",
+      "symbol": "",
+      "input": "datetime"
+    },
+    {
+      "key": "not-equals",
+      "name": "Not Equals",
+      "symbol": "!",
+      "input": "datetime"
+    },
+    {
+      "key": "exists",
+      "name": "Exists",
+      "symbol": ""
+    },
+    {
+      "key": "not-exists",
+      "name": "Not Exists",
+      "symbol": "!"
+    },
+    {
+      "key": "greater",
+      "name": "Greater Than",
+      "symbol": ">",
+      "input": "datetime"
+    },
+    {
+      "key": "less",
+      "name": "Less Than",
+      "symbol": "<",
+      "input": "datetime"
+    },
+    {
+      "key": "greater-equal",
+      "name": "Greater Than or Equal To",
+      "symbol": ">=",
+      "input": "datetime"
+    },
+    {
+      "key": "less-equal",
+      "name": "Less Than or Equal To",
+      "symbol": "<=",
+      "input": "datetime"
+    }
+  ],
+  "array": [
+    {
+      "key": "exists",
+      "name": "Exists",
+      "symbol": ""
+    },
+    {
+      "key": "not-exists",
+      "name": "Not Exists",
+      "symbol": "!"
+    }
+  ],
+  "currency": [
+    {
+      "key": "equals",
+      "name": "Equals",
+      "symbol": "",
+      "input": "number"
+    },
+    {
+      "key": "not-equals",
+      "name": "Not Equals",
+      "symbol": "!",
+      "input": "number"
+    },
+    {
+      "key": "contains",
+      "name": "Contains",
+      "symbol": "~",
+      "input": "number"
+    },
+    {
+      "key": "exists",
+      "name": "Exists",
+      "symbol": ""
+    },
+    {
+      "key": "not-exists",
+      "name": "Not Exists",
+      "symbol": "!"
+    },
+    {
+      "key": "greater",
+      "name": "Greater Than",
+      "symbol": ">",
+      "input": "number"
+    },
+    {
+      "key": "less",
+      "name": "Less Than",
+      "symbol": "<",
+      "input": "number"
+    },
+    {
+      "key": "greater-equal",
+      "name": "Greater Than or Equal To",
+      "symbol": ">=",
+      "input": "number"
+    },
+    {
+      "key": "less-equal",
+      "name": "Less Than or Equal To",
+      "symbol": "<=",
+      "input": "number"
+    }
+  ]
+}

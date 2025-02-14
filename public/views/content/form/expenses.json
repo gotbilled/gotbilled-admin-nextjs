@@ -1,0 +1,312 @@
+{
+  "path": "/expenses",
+  "populate": ["service", "invoices", "workspace", "payment.currency"],
+  "entry": [
+    [
+      {
+        "name": "Status",
+        "key": "status",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "name": "Draft",
+            "key": "draft"
+          },
+          {
+            "name": "Scheduled",
+            "key": "scheduled"
+          },
+          {
+            "name": "Trial",
+            "key": "trial"
+          },
+          {
+            "name": "Paid",
+            "key": "paid"
+          },
+          {
+            "name": "Active",
+            "key": "active"
+          },
+          {
+            "name": "Ended",
+            "key": "ended"
+          },
+          {
+            "name": "Canceled",
+            "key": "canceled"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Name",
+        "key": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Utility",
+        "key": "utility",
+        "type": "string",
+        "required": false
+      }
+    ],
+    [
+      {
+        "name": "Fulfilled",
+        "key": "fulfilled",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "Type",
+        "key": "type",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "name": "Single",
+            "key": "single"
+          },
+          {
+            "name": "Recurring",
+            "key": "recurring"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Dynamic Amount",
+        "key": "dynamicAmount",
+        "type": "boolean",
+        "required": false
+      }
+    ],
+    [
+      {
+        "name": "Billing Date",
+        "key": "billingDate",
+        "type": "component",
+        "relation": "single",
+        "required": true,
+        "entry": [
+          [
+            {
+              "name": "Unknown Initial Date",
+              "key": "unknownInitialDate",
+              "type": "boolean",
+              "required": false
+            },
+            {
+              "name": "Initial",
+              "key": "initial",
+              "type": "datetime",
+              "required": true
+            }
+          ],
+          [
+            {
+              "name": "End",
+              "key": "end",
+              "type": "datetime",
+              "required": false
+            },
+            {
+              "name": "Next",
+              "key": "next",
+              "type": "datetime",
+              "required": false
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Subscription",
+        "key": "subscription",
+        "type": "component",
+        "relation": "single",
+        "required": false,
+        "entry": [
+          [
+            {
+              "name": "Trial",
+              "key": "trial",
+              "type": "component",
+              "relation": "single",
+              "required": false,
+              "entry": [
+                [
+                  {
+                    "name": "Days",
+                    "key": "days",
+                    "type": "number",
+                    "required": true
+                  },
+                  {
+                    "name": "Amount",
+                    "key": "amount",
+                    "type": "number",
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "name": "Period",
+              "key": "period",
+              "type": "select",
+              "required": true,
+              "options": [
+                {
+                  "name": "Week",
+                  "key": "week"
+                },
+                {
+                  "name": "Month",
+                  "key": "month"
+                },
+                {
+                  "name": "Year",
+                  "key": "year"
+                }
+              ]
+            },
+            {
+              "name": "Interval",
+              "key": "interval",
+              "type": "number",
+              "required": true
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Reminders",
+        "key": "reminders",
+        "type": "component",
+        "relation": "multi",
+        "required": false,
+        "entry": [
+          [
+            {
+              "name": "Day Difference",
+              "key": "dayDifference",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "Remind Date",
+              "key": "remindDate",
+              "type": "datetime",
+              "required": true
+            }
+          ],
+          [
+            {
+              "name": "Recipients",
+              "key": "recipients",
+              "type": "component",
+              "relation": "multi",
+              "required": true,
+              "entry": [
+                [
+                  {
+                    "name": "Email",
+                    "key": "email",
+                    "type": "string",
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Payment",
+        "key": "payment",
+        "type": "component",
+        "relation": "single",
+        "required": true,
+        "entry": [
+          [
+            {
+              "name": "Currency",
+              "key": "currency",
+              "path": "/currencies/list/all",
+              "type": "relation",
+              "content": {
+                "name": "name",
+                "key": "_id",
+                "path": "content/currencies"
+              },
+              "relation": "single",
+              "required": true
+            },
+            {
+              "name": "Raw Amount",
+              "key": "rawAmount",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "Amount",
+              "key": "amount",
+              "type": "number",
+              "required": true
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "relations": [
+    {
+      "name": "Workspace",
+      "key": "workspace",
+      "path": "/workspaces",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "content/workspaces"
+      },
+      "relation": "single",
+      "disabled": false
+    },
+    {
+      "name": "Service",
+      "key": "service",
+      "path": "/services",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "content/services"
+      },
+      "relation": "single",
+      "disabled": false
+    },
+    {
+      "name": "Invoices",
+      "key": "invoices",
+      "path": "/expense-invoices",
+      "content": {
+        "key": "_id",
+        "path": "content/expense-invoices"
+      },
+      "relation": "multi",
+      "disabled": true
+    }
+  ]
+}

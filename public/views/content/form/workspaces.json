@@ -1,0 +1,199 @@
+{
+  "path": "/workspaces",
+  "populate": ["members", "expenses", "currency"],
+  "entry": [
+    [
+      {
+        "name": "Type",
+        "key": "type",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "name": "Personal",
+            "key": "personal"
+          },
+          {
+            "name": "Business",
+            "key": "business"
+          }
+        ]
+      },
+      {
+        "name": "Status",
+        "key": "status",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "name": "Active",
+            "key": "active"
+          },
+          {
+            "name": "Disabled",
+            "key": "disabled"
+          },
+          {
+            "name": "Blocked",
+            "key": "blocked"
+          }
+        ]
+      },
+      {
+        "name": "Plan",
+        "key": "plan",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "name": "Free",
+            "key": "free"
+          },
+          {
+            "name": "Standard",
+            "key": "standard"
+          },
+          {
+            "name": "Premium",
+            "key": "premium"
+          },
+          {
+            "name": "Enterprise",
+            "key": "enterprise"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Name",
+        "key": "name",
+        "type": "string",
+        "required": true
+      }
+    ],
+    [
+      {
+        "name": "Invoicing",
+        "key": "invoicing",
+        "type": "component",
+        "relation": "single",
+        "primary": ["used", "limit"],
+        "required": true,
+        "entry": [
+          [
+            {
+              "name": "Used",
+              "key": "used",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "Limit",
+              "key": "limit",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "Reset At",
+              "key": "resetAt",
+              "type": "date"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Billing",
+        "key": "billing",
+        "type": "component",
+        "relation": "single",
+        "entry": [
+          [
+            {
+              "name": "Payment Method",
+              "key": "paymentMethod",
+              "type": "select",
+              "options": [
+                {
+                  "name": "Stripe",
+                  "key": "stripe"
+                }
+              ],
+              "required": true
+            },
+            {
+              "name": "Customer ID",
+              "key": "customerId",
+              "type": "string",
+              "required": true
+            }
+          ],
+          [
+            {
+              "name": "Period",
+              "key": "period",
+              "type": "select",
+              "options": [
+                {
+                  "name": "Month",
+                  "key": "month"
+                },
+                {
+                  "name": "Year",
+                  "key": "year"
+                }
+              ],
+              "required": true
+            },
+            {
+              "name": "Renews At",
+              "key": "renewsAt",
+              "type": "date",
+              "required": true
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "relations": [
+    {
+      "name": "Members",
+      "key": "members",
+      "path": "/members",
+      "content": {
+        "name": "email",
+        "key": "_id",
+        "path": "content/members"
+      },
+      "relation": "multi",
+      "required": true
+    },
+    {
+      "name": "Currency",
+      "key": "currency",
+      "path": "/currencies/list/all",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "content/currencies"
+      },
+      "relation": "single",
+      "required": true
+    },
+    {
+      "name": "Expenses",
+      "key": "expenses",
+      "path": "/expenses",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "content/expenses"
+      },
+      "relation": "multi",
+      "disabled": true
+    }
+  ]
+}

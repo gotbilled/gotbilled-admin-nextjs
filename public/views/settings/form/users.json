@@ -1,0 +1,82 @@
+{
+  "path": "/users",
+  "populate": "role",
+  "entry": [
+    [
+      {
+        "name": "Email",
+        "key": "email",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Password",
+        "key": "password",
+        "type": "password"
+      }
+    ],
+    [
+      {
+        "name": "Details",
+        "key": "details",
+        "type": "component",
+        "primary": ["firstName", "lastName"],
+        "relation": "single",
+        "raw": true,
+        "required": true,
+        "entry": [
+          [
+            {
+              "name": "First Name",
+              "key": "firstName",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "Last Name",
+              "key": "lastName",
+              "type": "string",
+              "required": true
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "name": "Status",
+        "key": "status",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "name": "Active",
+            "key": "active"
+          },
+          {
+            "name": "Disabled",
+            "key": "disabled"
+          },
+          {
+            "name": "Blocked",
+            "key": "blocked"
+          }
+        ]
+      }
+    ]
+  ],
+  "relations": [
+    {
+      "name": "Role",
+      "key": "role",
+      "path": "/roles",
+      "content": {
+        "name": "name",
+        "key": "_id",
+        "path": "settings/roles"
+      },
+      "relation": "single",
+      "required": true
+    }
+  ]
+}

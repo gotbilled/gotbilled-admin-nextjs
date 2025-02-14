@@ -1,0 +1,13 @@
+{
+  "path": "/contacts",
+  "entry": [
+    [
+      {
+        "name": "Email",
+        "key": "email",
+        "type": "string",
+        "required": true
+      }
+    ]
+  ]
+}
