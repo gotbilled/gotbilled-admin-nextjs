@@ -8,6 +8,12 @@
         "key": "invoiceNumber",
         "type": "string",
         "required": false
+      },
+      {
+        "name": "Submitted Email",
+        "key": "submittedEmail",
+        "type": "string",
+        "required": false
       }
     ],
     [
